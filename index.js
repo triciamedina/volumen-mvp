@@ -33,5 +33,5 @@ function loadNav() {
 
 $(function() {
     loadNav();
-    handleMenuToggle();
+    // handleMenuToggle();
 });

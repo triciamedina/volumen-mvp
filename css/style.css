@@ -47,20 +47,24 @@ table {
 }
 
 /* NAV STYLES */
-button {
-	border: none;
-	background-color: transparent;
-	cursor: pointer;
-	padding: 0;
-}
-
-.nav-bar button,
-.nav-bar a {
+.nav-bar {
 	font-size: 20px;
 	font-weight: bold;
 	/* temp font */
 	font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-bar a {
 	text-decoration: none;
+}
+
+.nav-bar label {
+	cursor: pointer;
+}
+
+.nav-bar input {
+	height: 0; width: 0;
+	position: absolute;
 }
 
 .nav-bar .logo {
@@ -82,16 +86,8 @@ button {
 	padding: 0px 25px;
 }
 
-#nav-list {
-	height: 0;
-	overflow: hidden;
-}
-
-#nav-list.visible {
-	height: 100%;
-}
-
-.nav-link {
+a.nav-link,
+label.nav-label {
 	display: flex;
 	align-items: flex-start;
 	width: 100%;
@@ -105,33 +101,43 @@ a.nav-link:visited {
 	color: #ffffff;
 }
 
-.subnav {
-	height: 0;
-	overflow: hidden;
-}
-
-.subnav.visible {
-	height: 100%;
-}
-
-.subnav .nav-link {
+.subnav a.nav-link {
 	font-size: 17px;
 	padding: 15px 0px 15px 60px;
 	text-decoration: underline;
 	border: none;
 }
 
-.subnav li:first-of-type .nav-link {
+.subnav li:first-of-type a.nav-link {
 	padding-top: 5px;
 }
 
-.subnav li:last-of-type .nav-link {
+.subnav li:last-of-type a.nav-link {
 	padding-bottom: 30px;
+}
+
+/* SHOW/HIDE NAV */
+#nav-list {
+	height: 0;
+	overflow: hidden;
+}
+
+input#menu:checked + #nav-list {
+	height: 100%;
+}
+
+.subnav {
+	height: 0;
+	overflow: hidden;
+}
+
+#library input:checked + .subnav {
+	height: 100%;
 }
 
 /* DESKTOP */
 @media screen and (min-width: 1024px) {
-	#nav-bar .logo {
+	.nav-bar .logo img {
 		height: 50px;
 	}
 
