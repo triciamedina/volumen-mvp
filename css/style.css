@@ -139,7 +139,7 @@ input#menu:checked + #global-nav {
 	height: 100%;
 }
 
-/* DESKTOP */
+/* TABLET */
 @media screen and (min-width: 1024px) {
 	.nav-bar {
 		font-size: 17px;
