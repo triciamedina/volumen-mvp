@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Open+Sans:wght@400;600&family=Vollkorn:ital@0;1&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -18,14 +20,13 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+	display: flex;
+	flex-direction: column;
 }
 body {
 	line-height: 1;
@@ -44,6 +45,31 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+h1, h2 {
+	font-family: 'Vollkorn', serif;
+	color: #222;
+}
+
+p {
+	font-family: 'Karla', sans-serif;
+}
+
+li {
+	font-family: 'Open Sans', sans-serif;
+	color: #222;
+	text-decoration: underline;
+}
+
+button {
+	height: 50px;
+	width: 130px;
+	border-radius: 7px;
+	background-color: #60AC5C;
+	font: 'Open Sans', sans-serif;
+	font-weight: bold;
+	color: white;
 }
 
 /* NAV STYLES */
