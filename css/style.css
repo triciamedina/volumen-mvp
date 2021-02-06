@@ -135,8 +135,8 @@ button {
 	display: none;
 }
 
-a.nav-link,
-label.nav-label {
+.nav-link,
+.nav-label {
 	display: flex;
 	align-items: center;
 	width: 100%;
@@ -146,11 +146,11 @@ label.nav-label {
 	border-top: 2px solid white;
 }
 
-a.nav-link:visited {
+.nav-link:visited {
 	color: #ffffff;
 }
 
-.subnav a.nav-link {
+.subnav .nav-link {
 	font-size: 17px;
 	padding: 15px 0px 15px 60px;
 	text-decoration: underline;
@@ -171,7 +171,7 @@ a.nav-link:visited {
 	overflow: hidden;
 }
 
-input#menu:checked + #global-nav {
+#menu-input:checked ~ #global-nav {
 	height: 100%;
 }
 
@@ -180,7 +180,7 @@ input#menu:checked + #global-nav {
 	overflow: hidden;
 }
 
-#library input:checked + .subnav {
+#library input:checked ~ .subnav {
 	height: 100%;
 }
 
@@ -225,9 +225,17 @@ input#menu:checked + #global-nav {
 		height: 62px;
 		line-height: 62px;
 		color: #222222;
+		background-color: #ffffff;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+	}
+
+	#main .nav-link {
+		color: #222222;
+		background-color: #ffffff;
+		padding: 0px 70px;
+		height: 62px;
 	}
 
 	#global-nav {
@@ -246,16 +254,9 @@ input#menu:checked + #global-nav {
 		flex-direction: row;
 	}
 
-	a.nav-link,
-	a.nav-link:visited {
+	.nav-link,
+	.nav-link:visited {
 		border: none;
-	}
-
-	#main a.nav-link {
-		color: #222222;
-		background-color: #ffffff;
-		padding: 0px 70px;
-		height: 62px;
 	}
 
 	#global-nav li#library {
@@ -265,13 +266,13 @@ input#menu:checked + #global-nav {
 		width: 225px;
 	}
 
-	label.nav-label {
+	.nav-label {
 		font-size: 14px;
 		color: #ffffff;
 		padding: 20px 30px;
 	}
 
-	.subnav a.nav-link {
+	.subnav .nav-link {
 		font-size: 12px;
 		padding: 10px 40px;
 		height: 100%;
@@ -279,7 +280,7 @@ input#menu:checked + #global-nav {
 	}
 
 	/* SHOW/HIDE NAV */
-	input#resources + ul {
+	input#resources ~ ul {
 		height: 0;
 		width: 225px;
 		overflow: hidden;
@@ -287,7 +288,12 @@ input#menu:checked + #global-nav {
 		top: 62px; left: 0;
 	}
 
-	input#resources:checked + ul {
+	input#resources:checked ~ ul {
 		height: 100%;
+	}
+
+	input#resources:checked + label {
+		background-color: #60AC5C;
+		color: #ffffff;
 	}
 }
