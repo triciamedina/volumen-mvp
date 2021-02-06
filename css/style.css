@@ -86,6 +86,10 @@ table {
 	padding: 0px 25px;
 }
 
+#resources-btn {
+	display: none;
+}
+
 a.nav-link,
 label.nav-label {
 	display: flex;
@@ -117,12 +121,12 @@ a.nav-link:visited {
 }
 
 /* SHOW/HIDE NAV */
-#nav-list {
+#global-nav {
 	height: 0;
 	overflow: hidden;
 }
 
-input#menu:checked + #nav-list {
+input#menu:checked + #global-nav {
 	height: 100%;
 }
 
@@ -139,36 +143,53 @@ input#menu:checked + #nav-list {
 @media screen and (min-width: 1024px) {
 	.nav-bar {
 		font-size: 17px;
+		display: flex;
+		padding: 0 50px;
+		max-width: 1280px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.nav-bar .logo {
+		height: 62px;
+		line-height: 62px;
+		padding: 8px 20px;
 	}
 
 	.nav-bar .logo img {
-		height: 50px;
+		height: 46px;
 	}
 
 	#menu-btn,
-	#home {
+	#home-btn {
 		display: none;
 	}
 
-	#nav-list {
-		height: 100%;
-	}
-
-	#main {
+	#resources-btn {
+		display: inline-block;
+		padding: 0px 50px;
+		height: 62px;
+		line-height: 62px;
+		color: #222222;
 		position: absolute;
-		top: 0; right: 0;
+		top: 0; left: 0;
 	}
 
-	#main ul,
-	#library ul {
+	#global-nav {
+		height: 100%;
+		width: 100%;
+		position: relative;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	#global-nav > ul {
+		display: flex;
+	}
+
+	#main ul {
 		display: flex;
 		flex-direction: row;
-	}
-
-	#library > ul {
-		align-items: center;
-		justify-content: center;
-		background-color: #222222;
 	}
 
 	a.nav-link,
@@ -179,57 +200,40 @@ input#menu:checked + #nav-list {
 	#main a.nav-link {
 		color: #222222;
 		background-color: #ffffff;
-		padding: 0px 80px;
-		height: 60px;
+		padding: 0px 50px;
+		height: 62px;
 	}
 
-	#nav-list li.library {
+	#global-nav li#library {
 		position: relative;
+		height: 1000px;
+		display: block;
+		width: 190px;
 	}
 
 	label.nav-label {
 		font-size: 14px;
-		background-color: #222222;
 		color: #ffffff;
-		border: none;
-	}
-
-	.subnav {
-		position: absolute;
-		left: 0; top: 117px;
-		background-color: #60AC5C;
-		width: 100%;
-		align-items: center;
-		justify-content: center;
+		padding: 20px 30px;
 	}
 
 	.subnav a.nav-link {
 		font-size: 12px;
-		padding: 0px 60px;
-		text-decoration: none;
-		border: none;
+		padding: 10px 40px;
 		height: 100%;
-	}
-
-	.subnav li:first-of-type a.nav-link {
-		padding-top: 0;
-	}
-
-	.subnav li:last-of-type a.nav-link {
-		padding-bottom: 0;
+		line-height: 1.5em;
 	}
 
 	/* SHOW/HIDE NAV */
-	label.nav-label:hover {
-		background-color: #60AC5C;
+	input#resources + ul {
+		height: 0;
+		width: 225px;
+		overflow: hidden;
+		position: absolute;
+		top: 62px; left: 0;
 	}
 
-	label.nav-label:hover ~ .subnav,
-	.subnav:hover  {
-		height: 42px;
-	}
-
-	li#library > ul > li:hover > label.nav-label {
-		background-color: #60AC5C;
+	input#resources:checked + ul {
+		height: 100%;
 	}
 }
