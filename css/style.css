@@ -146,6 +146,10 @@ button {
 	border-top: 2px solid white;
 }
 
+.nav-label {
+	justify-content: space-between;
+}
+
 .nav-link:visited {
 	color: #ffffff;
 }
@@ -165,6 +169,12 @@ button {
 	padding-bottom: 30px;
 }
 
+.arrow {
+	width: 16px;
+	height: auto;
+	filter: invert(99%) sepia(4%) saturate(867%) hue-rotate(247deg) brightness(123%) contrast(100%);
+}
+
 /* SHOW/HIDE NAV */
 #global-nav {
 	height: 0;
@@ -182,6 +192,10 @@ button {
 
 #library input:checked ~ .subnav {
 	height: 100%;
+}
+
+#library input:checked + label > img {
+	transform: rotate(90deg);
 }
 
 /* TABLET */
@@ -269,7 +283,7 @@ button {
 	.nav-label {
 		font-size: 14px;
 		color: #ffffff;
-		padding: 20px 30px;
+		padding: 20px 25px;
 	}
 
 	.subnav .nav-link {
@@ -277,6 +291,10 @@ button {
 		padding: 10px 40px;
 		height: 100%;
 		line-height: 1.5em;
+	}
+
+	.arrow {
+		width: 8px;
 	}
 
 	/* SHOW/HIDE NAV */
