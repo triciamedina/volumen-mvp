@@ -44,18 +44,35 @@ table {
 }
 
 h1, h2 {
-	font-family: 'Vollkorn', serif;
+	font: normal normal bold 28px/35px Vollkorn;
+	letter-spacing: 0px;
 	color: #222;
+	text-align: left;
+	padding-bottom: 3%;
 }
 
 p {
-	font-family: 'Karla', sans-serif;
+	font: normal normal normal 18px/35px Karla;
+	letter-spacing: 0px;
+	color: #222;
+	text-align: left;
 }
 
-li {
+li a {
 	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
 	color: #222;
-	text-decoration: underline;
+	letter-spacing: 0px;
+}
+
+.link-list {
+	line-height: 1.5rem;
+}
+
+.learn-link {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	color: #222;
 }
 
 button {
@@ -66,4 +83,107 @@ button {
 	font: 'Open Sans', sans-serif;
 	font-weight: bold;
 	color: white;
+}
+
+#intro1, #intro2, #small-biz, #strategies_block, #resources_block, .listings, #articles_block, #browse_listings_block, #survey_cta_block, #about_block, #collaborate_cta {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#intro1 {
+	border: 7px #FFBB89;
+	border-style: solid solid solid none;
+	width: 90%;
+	left: -40px;
+	margin-top: 3%;
+	margin-bottom: 1.5%;
+}
+
+#intro2 {
+	border: 7px #74E58E;
+	border-style: solid none solid solid;
+	margin: 1.5% 0 1.5% 0;
+}
+
+#small_biz h1 {
+	text-align: center;
+	margin: 15px;
+	padding: 20px;
+	font: normal normal bold 35px/40px Vollkorn;
+	letter-spacing: 0px;
+	color: #222222;
+}
+
+#strategies_block {
+	border: 7px #FFEF95;
+	border-style: solid solid solid none;
+	width: 90%;
+	left: -40px;
+	margin: 1.5% 0 1.5% 0;
+}
+
+#resources_block {
+	border: 7px solid #E8C3FF;
+	border-style: solid none solid solid;
+	margin: 1.5% 0 1.5% 0;
+}
+
+#articles_block {
+	border: 7px #98DEF7;
+	border-style: solid solid solid none;
+	width: 90%;
+	left: -40px;
+	margin: 1.5% 0 1.5% 0;
+}
+
+#browse_listings_block {
+	justify-content: center;
+}
+
+#survey_cta_block {
+	justify-content: center;
+	background: #F2F2F2 0% 0% no-repeat padding-box;
+}
+
+#collaborate_cta {
+	justify-content: center;
+	background: #F2F2F2 0% 0% no-repeat padding-box;
+}
+
+img {
+	height: 480px;
+	width: auto;
+}
+
+img.foreground {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 1;
+}
+
+img.background {
+	position: relative;
+	left: 35%;
+	top: auto;
+	z-index: -1;
+}
+
+.img-container {
+	margin-right: 10%;
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 375px) {
+	#intro1, #intro2, #small-biz, #strategies_block, #resources_block, .listings, #articles_block {
+		flex-direction: column;
+	}
+
+	#intro2, #resources_block {
+		flex-direction: column-reverse;
+	}
 }
