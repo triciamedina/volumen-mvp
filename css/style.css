@@ -2,6 +2,10 @@
 
 /* Fonts, Typography, Buttons Styles */
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	line-height: 1;
 	margin: 0 auto;
@@ -250,6 +254,10 @@ img.background {
 		border: none;
 	}
 
+	#intro1 .text-container h1, p {
+		text-align: left;
+	}
+
 	#intro2 {
 		border: 7px #74E58E;
 		border-style: solid none solid solid;
@@ -257,6 +265,11 @@ img.background {
 
 	#intro2 .img-container {
 		border: none;
+		order: 1;
+	}
+
+	#intro2 .text-container h1, p {
+		text-align: left;
 	}
 
 	#strategies_block {
@@ -294,6 +307,11 @@ img.background {
 		margin: 4%;
 		background-color: #FFF;
 		text-align: center;
+	}
+
+	.our-initiative {
+		margin-top: 0;
+		margin-bottom: 0;
 	}
 
 	.our_team, .our_initiative {
