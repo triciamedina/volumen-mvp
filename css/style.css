@@ -3,6 +3,8 @@
 /* Fonts, Typography, Buttons Styles */
 * {
     box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 html {
@@ -362,7 +364,6 @@ img.background {
 .arrow {
 	width: 16px;
 	height: auto;
-	filter: invert(99%) sepia(4%) saturate(867%) hue-rotate(247deg) brightness(123%) contrast(100%);
 }
 
 /* SHOW/HIDE NAV */
