@@ -1,19 +1,29 @@
-<div id="bg"></div>
-<div class="nav-bar">
-    <a class="logo" href="/">
-        <img alt="Amplify Your Voice!" src="images/ayv-logo-horizontal.svg" />
-    </a>
+<section class="nav-bar desktop-max-width">
+
+    <div class="logo-box">
+        <a href="/">
+            <img class="logo" alt="Amplify Your Voice! Logo" src="images/ayv-logo-horizontal.svg" />
+        </a>
+    </div>
+
     <input type="checkbox" id="menu-input">
-    <label id="menu-btn" for="menu-input">Menu</label>
-    <nav id="global-nav">
+    <label id="mobile-menu-btn" for="menu-input">Menu</label>
+
+    <nav class="nav">
+
         <ul>
-            <li id="home-btn">
+
+            <li id="mobile-home-btn">
                 <a href="/" class="nav-link">Home</a>
             </li>
+
             <li id="library">
+
                 <input type="checkbox" id="resources">
                 <label class="nav-link" id="resources-btn" for="resources">Resources</label>
+
                 <ul>
+
                     <li>
                         <input type="checkbox" id="strategies">
                         <label class="nav-label" for="strategies">
@@ -38,6 +48,7 @@
                             </li>
                         </ul>
                     </li>
+
                     <li>
                         <input type="checkbox" id="growth">
                         <label class="nav-label" for="growth">
@@ -56,6 +67,7 @@
                             </li>
                         </ul>
                     </li>
+
                     <li>
                         <input type="checkbox" id="local-resources">
                         <label class="nav-label" for="local-resources">
@@ -74,6 +86,7 @@
                             </li>
                         </ul>
                     </li>
+
                     <li>
                         <input type="checkbox" id="articles">
                         <label class="nav-label" for="articles">
@@ -98,8 +111,11 @@
                             </li>
                         </ul>
                     </li>
+
                 </ul>
+
             </li>
+
             <li id="main">
                 <ul>
                     <li>
@@ -113,6 +129,9 @@
                     </li>
                 </ul>
             </li>
+
         </ul>
+
     </nav>
-</div>
+
+</section>
