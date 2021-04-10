@@ -286,12 +286,13 @@ img.background {
 	z-index: 2;
 }
 
-#nav-bar-container #bg {
+#nav-bar-container::before {
 	position: absolute;
+	content: "";
+	background-color: #ffffff;
 	top: 0; left: 0;
 	width: 100%;
 	height: 50px;
-	background-color: #ffffff;
 	z-index: -1;
 }
 
@@ -303,6 +304,7 @@ img.background {
 
 .nav-bar a {
 	text-decoration: none;
+	line-height: unset;
 }
 
 .nav-bar label {
@@ -318,19 +320,19 @@ img.background {
 	text-decoration: none;
 }
 
-.nav-bar .logo {
+.nav-bar .logo-box {
 	display: inline-block;
 	height: 50px;
 	line-height: 50px;
 	padding: 10px 20px;
 }
 
-.nav-bar .logo img {
+.nav-bar .logo {
 	height: 30px;
 	width: auto;
 }
 
-#menu-btn {
+#mobile-menu-btn {
 	height: 50px;
 	line-height: 50px;
 	float: right;
@@ -381,12 +383,12 @@ img.background {
 }
 
 /* SHOW/HIDE NAV */
-#global-nav {
+.nav {
 	height: 0;
 	overflow: hidden;
 }
 
-#menu-input:checked ~ #global-nav {
+#menu-input:checked ~ .nav {
 	height: 100%;
 }
 
@@ -403,37 +405,40 @@ img.background {
 	transform: rotate(90deg);
 }
 
-/* TABLET */
+/* DESKTOP */
 @media screen and (min-width: 1200px) {
 	body {
 		padding-top: 62px;
 	}
 
-	#nav-bar-container #bg {
-		height: 62px;
-	}
-
-	.nav-bar {
-		font-size: 17px;
-		display: flex;
+	.desktop-max-width {
 		padding: 0 50px;
 		max-width: 1280px;
 		margin-left: auto;
 		margin-right: auto;
 	}
 
-	.nav-bar .logo {
+	#nav-bar-container::before {
+		height: 62px;
+	}
+
+	.nav-bar {
+		font-size: 17px;
+		display: flex;
+	}
+
+	.nav-bar .logo-box {
 		height: 62px;
 		line-height: 62px;
 		padding: 8px 20px;
 	}
 
-	.nav-bar .logo img {
+	.nav-bar .logo {
 		height: 46px;
 	}
 
-	#menu-btn,
-	#home-btn {
+	#mobile-menu-btn,
+	#mobile-home-btn {
 		display: none;
 	}
 
@@ -457,13 +462,13 @@ img.background {
 		height: 62px;
 	}
 
-	#global-nav {
+	.nav {
 		height: 100%;
 		width: 100%;
 		position: relative;
 	}
 
-	#global-nav > ul {
+	.nav > ul {
 		display: flex;
 		justify-content: flex-end;
 	}
@@ -478,7 +483,7 @@ img.background {
 		border: none;
 	}
 
-	#global-nav li#library {
+	.nav li#library {
 		position: relative;
 		height: 1000px;
 		display: block;
