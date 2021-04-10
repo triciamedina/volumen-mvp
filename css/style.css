@@ -20,6 +20,7 @@ body {
 
 ol, ul {
 	list-style: none;
+	margin-top: 0;
 }
 
 h1, h2 {
@@ -220,7 +221,7 @@ img.background {
 @media (min-width: 750px) {}
 
 /* Larger than desktop */
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
 
 	body {
 		font-size: 1.3em;
@@ -257,11 +258,24 @@ img.background {
 	#intro2 {
 		border: 7px #74E58E;
 		border-style: solid none solid solid;
-  }
+  	}
 
 	#intro2, #resources_block {
-		flex-direction: column-reverse;
-  }
+		flex-direction: row;
+  	}
+
+    #browse_listings_block .text-container h1, p {
+		text-align: left;
+	}
+
+	#survey_cta_block .text-container h1, p {
+		text-align: left;
+	}
+
+	#collaborate-cta .text-container h1, p {
+		text-align: left;
+	}
+
 }
 
 /* NAV STYLES */
@@ -575,5 +589,4 @@ img.background {
 	#listings-btn, #survey-btn {
 		margin-top: 5%;
 	}
-
 }
