@@ -714,4 +714,73 @@ img.background {
 	#listings-btn, #survey-btn {
 		margin-top: 5%;
 	}
+
+	/* ARTICLE PAGE */
+
+	.breadcrumb {
+		line-height: 21px;
+		padding: 12px 0;
+	}
+
+	.breadcrumb li {
+		display: inline-block;
+	}
+	
+	.article-hero h1 {
+		font-size: 28px;
+		line-height: 35px;
+		margin: 24px 0;
+	}
+
+	.content-area {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+	}
+
+	.column-two-third {
+		width: 66.66%;
+	}
+
+	.article-section::before {
+		height: 62px;
+		margin-top: -62px;
+	}
+	
+	.article-section h2 {
+		font-size: 20px;
+		line-height: 25px;
+		margin: 0;
+	}
+
+	.article-section p {
+		font-size: 18px;
+		line-height: 25px;
+		margin: 20px 0;
+	}
+	
+	.article-section .caption {
+		font-size: 14px;
+		line-height: 20px;
+		text-align: left;
+	}
+
+	.article-nav-box {
+		position: sticky;
+		top: 67px;
+		padding: 15px 35px 25px 35px;
+		width: 100%;
+		z-index: 2;
+	}
+	
+	.article-nav-box h2 {
+		font-size: 21px;
+		line-height: 51px;
+		margin-top: 0;
+	}
+
+	.article-nav a {
+		font-size: 17px;
+		line-height: 45px;
+	}
 }
