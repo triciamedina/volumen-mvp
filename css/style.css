@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla&family=Open+Sans:wght@400;600&family=Vollkorn:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital@0;1&family=Open+Sans:wght@400;600&family=Vollkorn:ital,wght@0,400;0,700;1,400&display=swap');
 
 /* Fonts, Typography, Buttons Styles */
 * {
@@ -436,7 +436,7 @@ img.background {
 	content: "";
 }
 
-.article-hero--image {
+.article-image-container {
 	width: 100%;
 	height: auto;
 	position: relative;
@@ -445,14 +445,26 @@ img.background {
 	background-position: center;
 }
 
-.article-hero--image::after {
+.article-image-container.hero-image::after {
 	content: "";
 	display: block;
 	padding-bottom: 28.57%;
 }
 
-.article-hero--image.social-media {
-	background-image: url("../images/social-media-hero.jpeg");
+.article-image-container.section-image::after {
+	content: "";
+	display: block;
+	padding-bottom: 75%;
+	position: absolute;
+}
+
+.article-image-container.social-media {
+	background-image: url("../images/social-media-hero-cropped.jpg");
+}
+
+.article-image-container img {
+	height: auto;
+	width: 100%;
 }
 
 .article-hero h1 {
@@ -509,6 +521,13 @@ img.background {
 	line-height: 17px;
 	text-align: left;
 	margin: 12px 0;
+}
+
+.article-section .caption {
+	font-size: 12px;
+	line-height: 16px;
+	text-align: center;
+	font-style: italic;
 }
 
 /* DESKTOP */
