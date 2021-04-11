@@ -362,6 +362,10 @@ img.background {
 	color: #ffffff;
 }
 
+.nav-link:hover {
+	color: #ffffff;
+}
+
 .subnav .nav-link {
 	font-size: 17px;
 	padding: 15px 0px 15px 60px;
