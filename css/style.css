@@ -120,6 +120,7 @@ img.background {
 
 .img-container {
 	margin-right: 10%;
+	position: relative;
 }
 
 .text-conatiner {
