@@ -71,22 +71,22 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   display: inline-block;
-  padding: 0 30px;
+  padding: 15px 30px;
   color: rgb(255, 255, 255);
   text-align: center;
-  font-size: 16px;
+  font-size: 0.75rem;
   font-weight: 600;
-  line-height: 4rem;
-  letter-spacing: .1rem;
-  text-transform: uppercase;
+  line-height: 0.875rem;
+  /* letter-spacing: .1rem; */
+  /* text-transform: uppercase; */
   text-decoration: none;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   background-color: #60AC5C;
   border-radius: 5px;
   border: 1px solid #bbb;
   cursor: pointer;
   box-sizing: border-box;
-  font-family: 'Karla', sans-serif; 
+  font-family: 'Open Sans', sans-serif;
 }
 
 .button:hover,
@@ -159,6 +159,7 @@ img.people.background {
 	flex-direction: column;
 	align-items: center;
 	/* padding: 25px; */
+	position: relative;
 }
 
 #intro1 {
@@ -166,10 +167,6 @@ img.people.background {
 	/* left: -45px; */
 	margin-top: 15%;
 	margin-bottom: 1.5%;
-}
-
-#intro2  {
-	position: relative;
 }
 
 #intro1 .img-container {
@@ -209,7 +206,7 @@ img.people.background {
 	/* width: 90%; */
 	/* left: -40px; */
 	margin: 1.5% 0 1.5% 0;
-	position: relative;
+	/* position: relative; */
 }
 
 #strategies_block .img-container {
@@ -224,18 +221,34 @@ img.people.background {
 	left: 30px;
 }
 
-#resources_block {
+#resources_block .img-container {
 	border: 7px solid #E8C3FF;
 	border-style: solid none solid solid;
-	margin: 1.5% 0 1.5% 0;
+	/* margin: 1.5% 0 1.5% 0; */
 }
 
-#articles_block {
+#resources_block h2 {
+	position: absolute;
+	top: 80px;
+	transform: translateY(-20px);
+	left: 50px;
+	max-width: 175px;
+}
+
+#articles_block .img-container {
 	border: 7px #98DEF7;
 	border-style: solid solid solid none;
 	/* width: 90%; */
 	/* left: -40px; */
-	margin: 1.5% 0 1.5% 0;
+	/* margin: 1.5% 0 1.5% 0; */
+}
+
+#articles_block h2 {
+	position: absolute;
+	top: 80px;
+	transform: translateY(-40px);
+	left: 30px;
+	max-width: 160px;
 }
 
 #browse_listings_block {
@@ -243,10 +256,26 @@ img.people.background {
 	text-align: center;
 }
 
+#browse_listings_block h1 {
+	position: absolute;
+	top: 80px;
+	transform: translateY(-40px);
+	left: 30px;
+	max-width: 160px;
+}
+
 #survey_cta_block {
 	justify-content: center;
 	background-color: #F2F2F2;
 	text-align: center;
+}
+
+#survey_cta_block h1 {
+	position: absolute;
+	top: 80px;
+	transform: translateY(-50px);
+	left: 30px;
+	max-width: 160px;
 }
 
 #about_block {
@@ -313,6 +342,24 @@ img.people.background {
 	#intro2, #resources_block {
 		flex-direction: row;
   	}
+
+	#resources_block  {
+		border: 7px solid #E8C3FF;
+		border-style: solid none solid solid;
+	}
+
+	#resources_block  .img-container {
+		border: none;
+	}
+
+	#articles_block {
+		border: 7px #98DEF7;
+		border-style: solid solid solid none;
+	}
+
+	#articles_block .img-container {
+		border: none;
+	}
 
     #browse_listings_block .text-container h1, p {
 		text-align: left;
