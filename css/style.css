@@ -47,16 +47,18 @@ a:hover {
 	color: #60AC5C; 
   }
 
-li a {
+.link-list {
+	padding-top: 20px;
+	line-height: 1.5rem;
+}
+
+.link-list li a {
+	font-size: 0.875rem;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: bold;
 	color: #222;
 	letter-spacing: 0px;
 	line-height: 2.5rem;
-}
-
-.link-list {
-	line-height: 1.5rem;
 }
 
 .learn-link {
@@ -87,6 +89,7 @@ input[type="button"] {
   cursor: pointer;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
+  width: 100%;
 }
 
 .button:hover,
@@ -127,7 +130,6 @@ img.people.foreground {
 
 img.people.background {
 	transform: translateX(-25%);
-	/* z-index: -1; */
 }
 
 .img-container {
@@ -146,8 +148,7 @@ img.people.background {
 }
 
 .text-container {
-	/* text-align: center; */
-	padding: 15px 30px;
+	padding: 30px;
 }
 
 /* Layout Styling */
@@ -158,20 +159,29 @@ img.people.background {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/* padding: 25px; */
 	position: relative;
 }
 
-#intro1 {
-	/* width: 95%; */
-	/* left: -45px; */
-	margin-top: 15%;
-	margin-bottom: 1.5%;
+#intro2 h1, 
+#strategies_block h2,
+#resources_block h2,
+#articles_block h2,
+#browse_listings_block h1,
+#survey_cta_block h1 {
+	position: absolute;
+    top: 80px;
+    width: 160px;
 }
 
-#intro1 .img-container {
-	border: 7px #FFBB89;
-	border-style: solid solid solid none;
+#intro1 button,
+#intro2 button,
+#browse_listings_block button,
+#survey_cta_block button {
+	margin-top: 30px;
+}
+
+#intro1 {
+	margin-top: 15%;
 }
 
 #intro1 h1 {
@@ -179,11 +189,49 @@ img.people.background {
 }
 
 #intro2 h1 {
-	position: absolute;
-    top: 80px;
 	transform: translateY(-50px);
     left: 50px;
-    width: 175px;
+	width: 175px;
+}
+
+#strategies_block h2 {
+	transform: translateY(-10px);
+	left: 30px;
+}
+
+#resources_block h2 {
+	transform: translateY(-20px);
+	left: 50px;
+}
+
+#articles_block h2 {
+	transform: translateY(-40px);
+	left: 30px;
+}
+
+#browse_listings_block h1 {
+	transform: translateY(-40px);
+	left: 30px;
+}
+
+#survey_cta_block h1 {
+	transform: translateY(-50px);
+	left: 30px;
+}
+
+#small_biz h1 {
+	text-align: center;
+	font: normal normal bold 35px/40px Vollkorn;
+	font-size: 1.0625rem;
+	line-height: 1.3125rem;
+	letter-spacing: 0px;
+	color: #222222;
+	margin-top: -30px;
+}
+
+#intro1 .img-container {
+	border: 7px #FFBB89;
+	border-style: solid solid solid none;
 }
 
 #intro2 .img-container {
@@ -191,64 +239,19 @@ img.people.background {
 	border-style: solid none solid solid;
 }
 
-#small_biz h1 {
-	text-align: center;
-	margin: 15px;
-	padding: 20px;
-	font: normal normal bold 35px/40px Vollkorn;
-	font-size: 1.0625rem;
-	line-height: 1.3125rem;
-	letter-spacing: 0px;
-	color: #222222;
-}
-
-#strategies_block {
-	/* width: 90%; */
-	/* left: -40px; */
-	margin: 1.5% 0 1.5% 0;
-	/* position: relative; */
-}
-
 #strategies_block .img-container {
 	border: 7px #FFEF95;
 	border-style: solid solid solid none;
 }
 
-#strategies_block h2 {
-	position: absolute;
-	top: 80px;
-	transform: translateY(-10px);
-	left: 30px;
-}
-
 #resources_block .img-container {
 	border: 7px solid #E8C3FF;
 	border-style: solid none solid solid;
-	/* margin: 1.5% 0 1.5% 0; */
-}
-
-#resources_block h2 {
-	position: absolute;
-	top: 80px;
-	transform: translateY(-20px);
-	left: 50px;
-	max-width: 175px;
 }
 
 #articles_block .img-container {
 	border: 7px #98DEF7;
 	border-style: solid solid solid none;
-	/* width: 90%; */
-	/* left: -40px; */
-	/* margin: 1.5% 0 1.5% 0; */
-}
-
-#articles_block h2 {
-	position: absolute;
-	top: 80px;
-	transform: translateY(-40px);
-	left: 30px;
-	max-width: 160px;
 }
 
 #browse_listings_block {
@@ -256,26 +259,10 @@ img.people.background {
 	text-align: center;
 }
 
-#browse_listings_block h1 {
-	position: absolute;
-	top: 80px;
-	transform: translateY(-40px);
-	left: 30px;
-	max-width: 160px;
-}
-
 #survey_cta_block {
 	justify-content: center;
 	background-color: #F2F2F2;
 	text-align: center;
-}
-
-#survey_cta_block h1 {
-	position: absolute;
-	top: 80px;
-	transform: translateY(-50px);
-	left: 30px;
-	max-width: 160px;
 }
 
 #about_block {
